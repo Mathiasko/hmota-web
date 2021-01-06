@@ -4,7 +4,7 @@
       <Navigation />
     </header>
     <body>
-      <!-- <router-view /> -->
+      <router-view />
       <Footer />
     </body>
   </div>
