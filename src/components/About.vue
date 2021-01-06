@@ -1,6 +1,7 @@
 <template>
   <div>
-    TAIK JHAKOOOOOO????
+    TAIK JHAKOOOOOO??????
+    no dobre tak uz ma nechaj
   </div>
 </template>
 
