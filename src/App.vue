@@ -4,20 +4,21 @@
       <Navigation />
     </header>
     <body>
-      <Index />
+      <!-- <router-view /> -->
+      <Footer />
     </body>
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
-import Index from './components/Index.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Navigation,
-    Index,
+    Footer,
   },
 };
 </script>
