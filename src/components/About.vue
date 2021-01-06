@@ -2,6 +2,8 @@
   <div>
     TAIK JHAKOOOOOO??????
     no dobre tak uz ma nechaj
+    moja brancha
+    
   </div>
 </template>
 
