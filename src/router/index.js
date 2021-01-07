@@ -3,6 +3,7 @@ import Index from '../components/Index.vue';
 import About from '../components/About.vue'; 
 import Team from '../components/Team.vue'; 
 import Contact from '../components/Contact.vue'; 
+import Products from '../components/Products.vue'; 
 
 // const About = import('../components/About.vue'); //loads when needed
 // const Team = import('../components/Team.vue');
@@ -16,6 +17,7 @@ const router = createRouter({
     { path: '/about', component: About },
     { path: '/team', component: Team },
     { path: '/contact', component: Contact },
+    { path: '/products', component: Products },
   ],
 });
 
