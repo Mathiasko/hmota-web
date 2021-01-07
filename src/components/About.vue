@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import Value from './for About/Value';
+import Value from './forAbout/Value';
 
 export default {
   name: 'About',

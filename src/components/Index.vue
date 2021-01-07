@@ -67,9 +67,9 @@
 </template>
 
 <script>
-import EditorsPick from './for Index/EditorsPick.vue';
-import CurrentIssue from './for Index/CurrentIssue.vue';
-import SlidingReviews from './for Index/SlidingReviews.vue';
+import EditorsPick from './forIndex/EditorsPick.vue';
+import CurrentIssue from './forIndex/CurrentIssue.vue';
+import SlidingReviews from './forIndex/SlidingReviews.vue';
 
 export default {
   name: 'Index',
