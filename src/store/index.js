@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import filterProducts from '../components/forProducts/filterProducts.js';
 
 const store = createStore({
   state() {
@@ -51,7 +52,7 @@ const store = createStore({
           description: 'Get hmota as soon as it comes out',
           price: '20',
           sale: true,
-          image: 'hmotaSub.jpg',
+          image: ['hmotaSub.jpg'],
         },
         {
           id: 6,
@@ -61,7 +62,7 @@ const store = createStore({
             'The long-awaited spring issue is finally here and brings some surprises. It is more colorful, more comprehensive and we hope also better. In addition, we have prepared various accessories , whether it is a joyful children’s playlist, instagram filter or various small gifts that are ready for you.',
           price: '0,5',
           sale: false,
-          image: 'merch1.jpg',
+          image: ['merch1.jpg'],
         },
         {
           id: 7,
@@ -71,7 +72,7 @@ const store = createStore({
             'The long-awaited spring issue is finally here and brings some surprises. It is more colorful, more comprehensive and we hope also better. In addition, we have prepared various accessories , whether it is a joyful children’s playlist, instagram filter or various small gifts that are ready for you.',
           price: '0,5',
           sale: false,
-          image: 'merch2.jpg',
+          image: ['merch2.jpg'],
         },
         {
           id: 8,
@@ -81,30 +82,44 @@ const store = createStore({
             'The long-awaited spring issue is finally here and brings some surprises. It is more colorful, more comprehensive and we hope also better. In addition, we have prepared various accessories , whether it is a joyful children’s playlist, instagram filter or various small gifts that are ready for you.',
           price: '0,5',
           sale: false,
-          image: 'merch3.jpg',
+          image: ['merch3.jpg'],
         },
         {
           id: 9,
-          category: 'print',
+          category: 'prints',
           name: 'Hmota Print',
           description:
             'The long-awaited spring issue is finally here and brings some surprises. It is more colorful, more comprehensive and we hope also better. In addition, we have prepared various accessories , whether it is a joyful children’s playlist, instagram filter or various small gifts that are ready for you.',
           price: '0,5',
           sale: false,
-          image: 'print2.jpg',
+          image: ['print2.jpg'],
         },
         {
           id: 10,
-          category: 'print',
+          category: 'prints',
           name: 'Hmota print Knizka',
           description:
             'The long-awaited spring issue is finally here and brings some surprises. It is more colorful, more comprehensive and we hope also better. In addition, we have prepared various accessories , whether it is a joyful children’s playlist, instagram filter or various small gifts that are ready for you.',
           price: '0,5',
           sale: false,
-          image: 'print1.jpg',
+          image: ['print1.jpg'],
         },
       ],
+      cart: [],
     };
+  },
+  getters: {
+    getFilteredProducts(state) {
+      return (filter) => filterProducts(filter, state.products);
+    },
+    getCart(state) {
+      return state.cart;
+    },
+  },
+  mutations: {
+    addToCart(state, key) {
+      state.cart.push(state.products[key]);
+    },
   },
 });
 export default store;
