@@ -6,7 +6,7 @@
     </div>
     <div
       :class="{ hidden: popup }"
-      class="fixed top-0 left-0 w-full h-full bgcolor"
+      class="fixed overflow-auto top-0 left-0 w-full h-full bgcolor "
     >
       <TeamMemberCard
         @emitEvent="togglePopup"

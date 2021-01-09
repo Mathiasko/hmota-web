@@ -1,36 +1,49 @@
 <template>
-  <div class="flex flex-col md:flex-row">
-    <div class="m-auto width md:flex-1 ">
-      <p class="md:hidden text-3xl py-6">{{ productById.name }}</p>
-      <div class="md:flex">
-        <img
-          class="width m-auto"
-          :src="require(`../assets/productImg/${productById.image[0]}`)"
-        />
+  <div>
+    <div class="flex flex-col md:flex-row">
+      <div class="m-auto width md:flex-1">
+        <p class="md:hidden text-3xl py-6">{{ productById.name }}</p>
+        <div class="md:flex">
+          <img
+            class="width m-auto"
+            :src="require(`../assets/productImg/${productById.image[0]}`)"
+          />
+        </div>
       </div>
-    </div>
-    <div class="bgcol px-4 py-10 md:flex-1">
-      <p class="hidden md:block text-3xl py-6">{{ productById.name }}</p>
-      <p class="text-3xl">{{ productById.price }}</p>
-      <div class="flex py-10 md:max-w-sm">
-        <button class="bor  p-2 flex-1 ">Add to cart</button>
-        <button class="bor reduceBor ml-4 w-6 ">-</button>
-        <div><p class="bor reduceBor p-2 px-3  ">1</p></div>
-        <button class="bor w-6">+</button>
-      </div>
-      <div>
-        <p>
-          {{ productById.description }}
-        </p>
+      <div class="bgcol py-10 md:flex-1">
+        <div class="mx-5">
+          <p class="hidden md:block text-3xl py-6">{{ productById.name }}</p>
+          <p class="text-3xl">{{ priceInEuro(productById.price) }}</p>
+          <div class="flex py-10 md:max-w-sm">
+            <button @click="addToCart(productById.id)" class="buttonBor  p-2 flex-1 ">Add to cart</button>
+            <button class="buttonBor mdReduceBor ml-4 w-6 ">-</button>
+            <div><p class="buttonBor mdReduceBor p-2 px-3  ">1</p></div>
+            <button class="buttonBor w-6">+</button>
+          </div>
+          <div>
+            <p>
+              {{ productById.description }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div>
       <p>Related products</p>
-      <div class="grid grid-cols-2 md:grid-cols-4">
-        <ProductPreview :product="relatedProductsToShow[0]" />
-        <ProductPreview :product="relatedProductsToShow[1]" />
-        <ProductPreview :product="relatedProductsToShow[2]" />
-        <ProductPreview :product="relatedProductsToShow[3]" />
+      <div class="grid grid-cols-2 md:grid-cols-4 border-l border-black">
+        <ProductPreview
+          class="mdReduceBor"
+          :product="relatedProductsToShow[0]"
+        />
+        <ProductPreview
+          class="mdReduceBor"
+          :product="relatedProductsToShow[1]"
+        />
+        <ProductPreview
+          class="mdReduceBor"
+          :product="relatedProductsToShow[2]"
+        />
+        <ProductPreview class="" :product="relatedProductsToShow[3]" />
       </div>
     </div>
   </div>
@@ -38,15 +51,16 @@
 
 <script>
 import ProductPreview from './forProducts/ProductPreview';
+import { priceInEuro } from './shared/currency';
 
 export default {
   name: 'Product',
-  components:{
-    ProductPreview
+  components: {
+    ProductPreview,
   },
   data() {
     return {
-      productId: this.id
+      productId: this.id,
     };
   },
   props: {
@@ -55,6 +69,14 @@ export default {
       type: [Number, String],
     },
   },
+  methods:{
+    priceInEuro,
+    addToCart(id){
+      this.$store.commit('addToCart', {
+        id: id
+      })
+    }
+  },
   computed: {
     productById() {
       return this.$store.getters.getProduct(this.productId);
@@ -62,9 +84,11 @@ export default {
     relatedProducts() {
       return this.$store.getters.getRelatedProducts(this.productById.category);
     },
-    relatedProductsToShow(){
-      return this.relatedProducts.filter(product => this.productId != product.id)
-    }
+    relatedProductsToShow() {
+      return this.relatedProducts.filter(
+        (product) => this.productId != product.id,
+      );
+    },
   },
 };
 </script>
@@ -74,19 +98,18 @@ export default {
   .width {
     width: 80vw;
   }
+  .reduceBor {
+    margin-right: -1px;
+  }
 }
 .bgcol {
   background-color: #7393bf;
 }
-.bor {
+.buttonBor {
   border: 1px solid #7393bf;
   background-color: white;
 }
-.reduceBor {
+.mdReduceBor {
   margin-right: -1px;
-}
-.bors {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 </style>

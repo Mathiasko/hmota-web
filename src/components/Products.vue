@@ -7,7 +7,7 @@
       <button @click="setFilter('merch')">Merch</button>
       <button @click="setFilter('prints')">Prints</button>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 borl">
+    <div class="grid grid-cols-2 md:grid-cols-4 borlb">
       <router-link
         :to="{ name: 'Product', params: { id: product.id } }"
         v-for="product in visibleProducts"
@@ -48,8 +48,9 @@ export default {
 </script>
 
 <style scoped>
-.borl{
-  border-right: 1px solid black;
+.borlb{
+  border-left: 1px solid black;
   border-bottom: 1px solid black;
 }
+
 </style>
