@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:px-20 bg-gray-200 ">
+  <div class="p-3 md:px-32 bg-gray-200 ">
     <header>
       <Navigation />
     </header>

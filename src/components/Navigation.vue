@@ -47,7 +47,7 @@
           <div
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width2 borRight"
           >
-            Shopfwrfwrf
+            Shop
           </div>
           <div
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width borRight relative"
@@ -66,15 +66,18 @@
               <div class="p-5 text-center jurBor">Volaco</div>
             </div>
           </div>
-          <div
-            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1 borRight"
+          <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1 borRight">
+
+          <router-link :to="{ name: 'About' }"
+            
           >
             About us
+          </router-link>
           </div>
           <div
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width "
           >
-            Contactwrfwr
+            Contact
           </div>
         </div>
       </div>

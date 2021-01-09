@@ -112,6 +112,12 @@ const store = createStore({
     getFilteredProducts(state) {
       return (filter) => filterProducts(filter, state.products);
     },
+    getProduct: (state) => (id) =>{
+      return state.products.find(x => x.id == id)
+    },
+    getRelatedProducts: (state)=> (category)=> {
+      return state.products.filter(x => x.category == category)
+    },
     getCart(state) {
       return state.cart;
     },

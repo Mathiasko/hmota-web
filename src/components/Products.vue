@@ -7,22 +7,25 @@
       <button @click="setFilter('merch')">Merch</button>
       <button @click="setFilter('prints')">Prints</button>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4">
-      <router-link :to="{name: 'Product'}" class="" v-for="product in visibleProducts" :key="product.id">
-        <img :src="require(`../assets/productImg/${product.image[0]}`)" />
-        <div>
-            <p>{{product.name}}</p>
-            <p>{{product.price}}</p>
-        </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 borl">
+      <router-link
+        :to="{ name: 'Product', params: { id: product.id } }"
+        v-for="product in visibleProducts"
+        :key="product.id"
+      >
+        <ProductPreview :product="product"/>
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
-
+import ProductPreview from './forProducts/ProductPreview';
 export default {
   name: 'Products',
+  components: {
+    ProductPreview,
+  },
   data() {
     return {
       filter: null,
@@ -44,4 +47,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.borl{
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+</style>
