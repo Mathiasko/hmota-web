@@ -44,18 +44,11 @@
       <p>Related products</p>
       <div class="grid grid-cols-2 md:grid-cols-4 border-l border-black">
         <ProductPreview
+          v-for="product in limitRelated"
+          :key="product.index"
           class="mdReduceBor"
-          :product="relatedProductsToShow[0]"
+          :product="product"
         />
-        <ProductPreview
-          class="mdReduceBor"
-          :product="relatedProductsToShow[1]"
-        />
-        <ProductPreview
-          class="mdReduceBor"
-          :product="relatedProductsToShow[2]"
-        />
-        <ProductPreview class="" :product="relatedProductsToShow[3]" />
       </div>
     </div>
   </div>
@@ -73,7 +66,7 @@ export default {
   data() {
     return {
       productId: this.id,
-      amount: 2,
+      amount: 1,
     };
   },
   props: {
@@ -89,14 +82,13 @@ export default {
         id: id,
         amount: amount,
       });
-        console.log(amount)
-
+      console.log(amount);
     },
     decreaseAmount() {
       if (this.amount === 1) {
         return null;
       } else {
-        return this.amount-- ;
+        return this.amount--;
       }
     },
     increaseAmount() {
@@ -106,6 +98,7 @@ export default {
         this.amount++;
       }
     },
+
   },
   computed: {
     productById() {
@@ -115,9 +108,11 @@ export default {
       return this.$store.getters.getRelatedProducts(this.productById.category);
     },
     relatedProductsToShow() {
-      return this.relatedProducts.filter(
-        (product) => this.productId != product.id,
+      return this.relatedProducts.filter((product) => this.productId != product.id,
       );
+    },
+        limitRelated() {
+      return this.relatedProductsToShow.slice(0, 4);
     },
   },
 };

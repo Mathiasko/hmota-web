@@ -6,9 +6,9 @@ import Contact from '../components/Contact.vue';
 import Products from '../components/Products.vue';
 import Product from '../components/Product.vue';
 import Cart from '../components/Cart.vue';
+import Journals from '../components/Journals.vue';
+import Journal from '../components/Journal.vue';
 
-// const About = import('../components/About.vue'); //loads when needed
-// const Team = import('../components/Team.vue');
 
 const history = createWebHashHistory();
 const router = createRouter({
@@ -20,6 +20,8 @@ const router = createRouter({
     { path: '/contact', name: 'Contact', component: Contact },
     { path: '/products', name: 'Products', component: Products },
     { path: '/cart', name: 'Cart', component: Cart },
+    { path: '/journals', name: 'Journals', component: Journals },
+    { path: '/journal/', name: 'Journal', component: Journal },
     { path: '/product/:id', props: true, name: 'Product', component: Product },
   ],
 });

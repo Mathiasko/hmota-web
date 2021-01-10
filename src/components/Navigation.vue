@@ -33,7 +33,7 @@
       <div
         class="flex-none flex items-center justify-center bor md:flex-1 w-1/6"
       >
-        <p>Cart</p>
+        <router-link :to="{ name: 'Cart' }">Cart</router-link>
       </div>
     </div>
 
@@ -69,9 +69,7 @@
           </div>
           <div class="p-5 border-t border-solid border-gray-800 md:border-none text-center width1 borRight">
 
-          <router-link :to="{ name: 'About' }"
-            
-          >
+
             <router-link :to="{ name: 'About' }"> About us </router-link>
           </div>
           <div>

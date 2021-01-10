@@ -112,48 +112,16 @@ const store = createStore({
             id: '10',
             name: 'Hmota print Knizka',
             price: 0.5,
-          }
-        },
-        {
-          amount: 10,
-          product: {
-            id: '9',
-            name: 'Hmota Print',
-            price: 0.5,
           },
         },
         {
           amount: 1,
           product: {
-            id: '10',
-            name: 'Hmota print Knizka',
-            price: 0.5,
-          }
-        },
-        {
-          amount: 10,
-          product: {
             id: '9',
             name: 'Hmota Print',
             price: 0.5,
           },
         },
-        {
-          amount: 1,
-          product: {
-            id: '10',
-            name: 'Hmota print Knizka',
-            price: 0.5,
-          }
-        },
-        {
-          amount: 10,
-          product: {
-            id: '9',
-            name: 'Hmota Print',
-            price: 0.5,
-          },
-        }
       ],
     };
   },
@@ -161,11 +129,11 @@ const store = createStore({
     getFilteredProducts(state) {
       return (filter) => filterProducts(filter, state.products);
     },
-    getProduct: (state) => (id) =>{
-      return state.products.find(x => x.id == id)
+    getProduct: (state) => (id) => {
+      return state.products.find((x) => x.id == id);
     },
-    getRelatedProducts: (state)=> (category)=> {
-      return state.products.filter(x => x.category == category)
+    getRelatedProducts: (state) => (category) => {
+      return state.products.filter((x) => x.category == category);
     },
     getCart(state) {
       return state.cart;
@@ -173,19 +141,20 @@ const store = createStore({
   },
   mutations: {
     addToCart(state, idCount) {
-      const { cart, products } = state
-      const productIndex = cart.findIndex(cartProduct => cartProduct.product.id === idCount.id) // NOTE: vráti -1 ak neexistuje, alebo vrati index productu v košiku https://mdn.io/array/findIndex
-      const product = products.find(product => product.id === idCount.id)
-      
+      const { cart, products } = state;
+      const productIndex = cart.findIndex(
+        (cartProduct) => cartProduct.product.id === idCount.id,
+      ); // NOTE: vráti -1 ak neexistuje, alebo vrati index productu v košiku https://mdn.io/array/findIndex
+      const product = products.find((product) => product.id === idCount.id);
+
       if (productIndex > -1) {
-        const cartProduct = cart[productIndex]
-        cartProduct.amount += idCount.amount
+        const cartProduct = cart[productIndex];
+        cartProduct.amount += idCount.amount;
       } else {
         cart.push({
           amount: idCount.amount,
           product,
         });
-
       }
     },
   },
