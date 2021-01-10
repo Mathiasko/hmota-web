@@ -1,10 +1,19 @@
 <template>
-  <div class="md:flex h-full w-5/6 m-auto overflow-auto" @click="exitPopup">
-    <img class="md:flex-1 " :src="'assets/img/Ema.jpg'" />
-    <div class="md:flex-1 color text-white p-7">
+
+  <div
+    class="lg:w-5/6 xl:w-2/3 md:flex m-auto mt-20"
+    @click="exitPopup"
+  >
+  
+    <div class="md:w-1/2">
+      <img :src="'assets/img/Ema.jpg'" />
+    </div>
+
+    <div class="md:w-1/2 color text-white p-7">
       <h2 class="text-2xl pb-5">{{ TeamMembers[role].[id].name }}</h2>
       <p>{{ TeamMembers[role].[id].text }}</p>
     </div>
+
   </div>
 </template>
 

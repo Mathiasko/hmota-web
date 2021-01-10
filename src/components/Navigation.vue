@@ -51,7 +51,7 @@
           </router-link>
           </div>
           <div
-            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width borRight relative"
+            class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight relative"
             @click="toggleJur = !toggleJur"
           >
             Journal
@@ -67,8 +67,10 @@
               <div class="p-5 text-center jurBor">Volaco</div>
             </div>
           </div>
-          <div
-            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1 borRight"
+          <div class="p-5 border-t border-solid border-gray-800 md:border-none text-center width1 borRight">
+
+          <router-link :to="{ name: 'About' }"
+            
           >
             <router-link :to="{ name: 'About' }"> About us </router-link>
           </div>
@@ -105,13 +107,13 @@ export default {
 <style scoped>
 @media (min-width: 768px) {
   .borRight {
-    border-right: 2px solid rgb(17, 24, 39);
+    border-right: 1px solid rgb(17, 24, 39);
   }
   .jurBor {
-    border: 2px solid rgb(17, 24, 39);
+    border: 1px solid rgb(17, 24, 39);
     border-top: none;
-    margin-left: -1.5px;
-    margin-right: -2px;
+    margin-left: -1px;
+    margin-right: -1px;
   }
   .width {
     width: 25%;
@@ -124,16 +126,16 @@ export default {
   }
 }
 .bor {
-  border: 2px solid rgb(17, 24, 39);
+  border: 1px solid rgba(17, 24, 39, 0.685);
 }
 
 .borTopNone {
-  border: 2px solid rgb(17, 24, 39);
+  border: 1px solid rgb(17, 24, 39);
   border-top: none;
 }
 .borCenter {
-  border-top: 2px solid rgb(17, 24, 39);
-  border-bottom: 2px solid rgb(17, 24, 39);
+  border-top: 1px solid rgb(17, 24, 39);
+  border-bottom: 1px solid rgb(17, 24, 39);
 }
 .flex-2 {
   flex: 2;

@@ -61,7 +61,7 @@
         </div>
       </div>
       <div>
-        <SlidingReviews />
+        <CarouselReviews />
       </div>
     </div>
   </div>
@@ -70,14 +70,14 @@
 <script>
 import EditorsPick from './forIndex/EditorsPick.vue';
 import CurrentIssue from './forIndex/CurrentIssue.vue';
-import SlidingReviews from './forIndex/SlidingReviews.vue';
+import CarouselReviews from './forIndex/CarouselReviews.vue';
 
 export default {
   name: 'Index',
   components: {
     EditorsPick,
     CurrentIssue,
-    SlidingReviews,
+    CarouselReviews,
   },
 };
 </script>
