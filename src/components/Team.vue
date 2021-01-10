@@ -2,7 +2,7 @@
   <div class="">
     <div class="relative">
       <img :src="'assets/img/Team.jpg'" />
-      <p class="position">Meet our team</p>
+      <p class="position header-size-mobile">Meet our team</p>
     </div>
     <div
       :class="{ hidden: popup }"
@@ -123,5 +123,24 @@ export default {
 }
 .bgcolor {
   background-color: #353d67be;
+}
+.text-color-1{
+    color: #F5F5F5;
+}
+.text-color-2{
+    color: #3B4361;
+}
+.text-color-3{
+  color: #587EA5;
+}
+
+.header-size-mobile{
+    font-size: 22px;
+}
+.text-size-1-mobile{
+    font-size: 15px;
+}
+.text-size-2-mobile{
+    font-size: 18px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2 class="my-16 text-3xl">Editor's Pick</h2>
+  <div class=".text-font">
+    <h2 class="my-16 text-3xl header-size-mobile ">Editor's Pick</h2>
     <div class="grid grid-cols-1 md:grid-cols-3">
       <Pick
         :title="'Hygge'"
@@ -47,4 +47,7 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.text-font{
+  font-family: 'Poppins', sans-serif;
+}</style>

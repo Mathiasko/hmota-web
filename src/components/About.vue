@@ -1,11 +1,11 @@
 <template>
-  <div class="grid md:grid-cols-2">
+  <div class="md:grid md:grid-cols-2 text-font">
     <div>
-      <img :src="'assets/img/aboutus.png'" />
+      <img   :src="'assets/img/aboutus.png'" />
     </div>
     <div class="bgCol">
       <h2 class="pt-10 md:pt-20 text-color-1 header-size-mobile">About HMOTA</h2>
-      <p class="py-10 md:py-14 text-color-1 text-size-1-mobile" >
+      <p class="py-10 md:py-14 text-color-1 text-size-1-mobile " >
         HMOTA is a nationwide student magazine that brings together and raises
         the profile of young journalists and artists. It’s published four times
         a year. Students from all over Slovakia work for HMOTA in their free
@@ -42,18 +42,18 @@
         unique design and fresh perspective on a certain topic.
       </p>
     </div>
-    <div>
-      <p class="pt-10 md:pt-20 text-color-2">
-        “The idea of my own magazine at that time was only a negligible and
+    <div >
+      <p class=" pt-10 md:pt-20 text-color-2">
+        <em>“The idea of my own magazine at that time was only a negligible and
         vague idea, and yet I was thrilled with it. I wrote to my mentor,
         Alžběta Dlhá and presented the idea to her. She liked it and that’s how
         a 17-year-old student from Trenčín at that time started to create. I
         came up with the name, started socials, networking, created the first
         visuals, and addressed my friends. They were too enthusiastic about the
         idea and the first issue gradually began to form. HMOTA finally arose
-        from nothing, just an idea, a spark.” <br />
+        from nothing, just an idea, a spark.”<br />
         <br />
-        - Laura Bilíková, general editor
+        - Laura Bilíková, general editor</em> 
       </p>
     </div>
     <div class="col-span-2">
@@ -143,5 +143,8 @@ export default {
 }
 .text-size-2-mobile{
     font-size: 18px;
+}
+.text-font{
+  font-family: 'Poppins', sans-serif;
 }
 </style>

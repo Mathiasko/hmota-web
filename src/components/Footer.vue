@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-2 md:grid-cols-7 bgCol p-10">
+  <div class="grid grid-cols-2 md:grid-cols-7 bgCol p-10 text-color-1 text-size-2-mobile">
     <div>
-      <p>Socials</p>
+      <p><strong>Socials</strong></p>
       <ul>
         <li>
           <a href="">Instagram</a>
@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div>
-      <p>Content</p>
+      <p><strong>Content</strong></p>
       <ul>
         <li>Cart</li>
         <li>Shop</li>
@@ -29,7 +29,7 @@
       </ul>
     </div>
     <div>
-      <p>Jurnal</p>
+      <p><strong>Journal</strong></p>
       <ul>
         <li>Essays</li>
         <li>Short stories</li>
@@ -40,10 +40,10 @@
       </ul>
     </div>
     <div class="col-span-2 pt-10">
-      <p>©2019 – 2021 HMOTA GDPR rules</p>
+      <p><strong>©2019 – 2021 HMOTA GDPR rules</strong></p>
     </div>
     <div class="col-span-2 pt-10">
-      <p>Contact</p>
+      <p><strong>Contact</strong></p>
       <p>casopishmota@gmail.com</p>
       <img :src="'assets/img/logoFut.jpg'">
     </div>
@@ -58,6 +58,25 @@ export default {
 
 <style scoped>
 .bgCol{
-  background-color: #343C68;
+  background-color: #363E66;
+}
+.text-color-1{
+    color: #F5F5F5;
+}
+.text-color-2{
+    color: #3B4361;
+}
+.text-color-3{
+  color: #587EA5;
+}
+
+.header-size-mobile{
+    font-size: 22px;
+}
+.text-size-1-mobile{
+    font-size: 15px;
+}
+.text-size-2-mobile{
+    font-size: 18px;
 }
 </style>

@@ -42,17 +42,19 @@
 
       <div class="md:flex w-full" id="menu" :class="{ hidden: toggleMob }">
         <div class="md:flex w-full">
+          <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width2 borRight">
           <router-link
             :to="{ name: 'Products' }"
-            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width2 borRight"
+            
           >
             Shop
           </router-link>
+          </div>
           <div
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width borRight relative"
             @click="toggleJur = !toggleJur"
           >
-            Jurnal
+            Journal
             <div
               class="absolute flex flex-col w-full top-16 left-0"
               :class="{ hidden: toggleJur }"
@@ -71,12 +73,15 @@
             <router-link :to="{ name: 'About' }"> About us </router-link>
           </div>
           <div>
+            <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width">
             <router-link
               :to="{ name: 'Contact' }"
-              class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width"
+              
             >
               Contact
+            
             </router-link>
+            </div>
           </div>
         </div>
       </div>
