@@ -14,12 +14,12 @@ const history = createWebHashHistory();
 const router = createRouter({
   history,
   routes: [
-    { path: '/', component: Index },
-    { path: '/about', component: About },
-    { path: '/team', component: Team },
-    { path: '/contact', component: Contact },
-    { path: '/products', component: Products },
-    { path: '/product', component: Product },
+    { path: '/', name:"Index", component: Index },
+    { path: '/about', name:"About", component: About },
+    { path: '/team', name:"Team", component: Team },
+    { path: '/contact', name:"Contact", component: Contact },
+    { path: '/products', name:"Products", component: Products },
+    { path: '/product', name:"Product", component: Product },
   ],
 });
 

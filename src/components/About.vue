@@ -4,8 +4,8 @@
       <img :src="'assets/img/aboutus.png'" />
     </div>
     <div class="bgCol">
-      <h2 class="pt-10 md:pt-20">About HMOTA</h2>
-      <p class="py-10 md:py-14">
+      <h2 class="pt-10 md:pt-20 text-color-1 header-size-mobile">About HMOTA</h2>
+      <p class="py-10 md:py-14 text-color-1 text-size-1-mobile" >
         HMOTA is a nationwide student magazine that brings together and raises
         the profile of young journalists and artists. It’s published four times
         a year. Students from all over Slovakia work for HMOTA in their free
@@ -19,8 +19,8 @@
       </p>
     </div>
     <div class="bgCol">
-      <h2 class="pt-10 md:pt-14">Our Story</h2>
-      <p class="py-10 md:py-14">
+      <h2 class="pt-10 md:pt-14 text-color-1 header-size-mobile">Our Story</h2>
+      <p class="py-10 md:py-14 text-color-1 text-size-1-mobile">
         The magazine was founded in 2018 by Laura Bilíková, a student from
         Trenčín when she was only seventeen years old. She felt that Slovakia
         lacked a platform that brought together young creatives and decided to
@@ -43,7 +43,7 @@
       </p>
     </div>
     <div>
-      <p class="pt-10 md:pt-20">
+      <p class="pt-10 md:pt-20 text-color-2">
         “The idea of my own magazine at that time was only a negligible and
         vague idea, and yet I was thrilled with it. I wrote to my mentor,
         Alžběta Dlhá and presented the idea to her. She liked it and that’s how
@@ -57,8 +57,8 @@
       </p>
     </div>
     <div class="col-span-2">
-      <h2 class="py-10 md:py-14">Our values</h2>
-      <div class="md:grid grid-cols-2">
+      <h2 class="py-10 md:py-14 text-color-2 ">Our values</h2>
+      <div class="md:grid grid-cols-2 text-color-1">
         <Value
           :value="'01. Quality'"
           :text="
@@ -93,7 +93,7 @@
         />
       </div>
     </div>
-    <div class="md:col-span-2">
+    <div class="md:col-span-2 text-color-1" >
       <h2>Our Process</h2>
       <img class="hidden md:block w-full" :src="'assets/img/infogBig.jpg'" />
       <img class="md:hidden w-full" :src="'assets/img/infogSmall.jpg'" />
@@ -127,5 +127,21 @@ export default {
 <style scoped>
 .bgCol {
   background-color: #353d67;
+}
+.text-color-1{
+    color: #F5F5F5;
+}
+.text-color-2{
+    color: #3B4361;
+}
+
+.header-size-mobile{
+    font-size: 22px;
+}
+.text-size-1-mobile{
+    font-size: 15px;
+}
+.text-size-2-mobile{
+    font-size: 18px;
 }
 </style>

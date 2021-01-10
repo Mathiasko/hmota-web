@@ -2,7 +2,7 @@
   <div>
     <div class="flex w-full">
       <div class="flex justify-center w-1/6 bor md:flex-1">
-        <div class=" md:hidden">
+        <div class="md:hidden">
           <label for="menu-toggle" class="pointer-cursor"
             ><svg
               class="fill-current text-gray-900"
@@ -38,17 +38,16 @@
     </div>
 
     <div class="w-full borTopNone">
-      <div class="md:hidden">
-        Search
-      </div>
+      <div class="md:hidden">Search</div>
 
       <div class="md:flex w-full" id="menu" :class="{ hidden: toggleMob }">
         <div class="md:flex w-full">
-          <div
+          <router-link
+            :to="{ name: 'Products' }"
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width2 borRight"
           >
-            Shopfwrfwrf
-          </div>
+            Shop
+          </router-link>
           <div
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width borRight relative"
             @click="toggleJur = !toggleJur"
@@ -69,12 +68,15 @@
           <div
             class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1 borRight"
           >
-            About us
+            <router-link :to="{ name: 'About' }"> About us </router-link>
           </div>
-          <div
-            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width "
-          >
-            Contactwrfwr
+          <div>
+            <router-link
+              :to="{ name: 'Contact' }"
+              class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width"
+            >
+              Contact
+            </router-link>
           </div>
         </div>
       </div>
@@ -84,7 +86,7 @@
 
 <script>
 export default {
-  name: 'Navigation',
+  name: "Navigation",
   data() {
     return {
       toggleMob: true,
