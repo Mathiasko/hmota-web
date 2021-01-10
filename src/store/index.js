@@ -115,7 +115,39 @@ const store = createStore({
           }
         },
         {
+          amount: 10,
+          product: {
+            id: '9',
+            name: 'Hmota Print',
+            price: 0.5,
+          },
+        },
+        {
           amount: 1,
+          product: {
+            id: '10',
+            name: 'Hmota print Knizka',
+            price: 0.5,
+          }
+        },
+        {
+          amount: 10,
+          product: {
+            id: '9',
+            name: 'Hmota Print',
+            price: 0.5,
+          },
+        },
+        {
+          amount: 1,
+          product: {
+            id: '10',
+            name: 'Hmota print Knizka',
+            price: 0.5,
+          }
+        },
+        {
+          amount: 10,
           product: {
             id: '9',
             name: 'Hmota Print',
@@ -140,19 +172,20 @@ const store = createStore({
     },
   },
   mutations: {
-    addToCart(state, id) {
+    addToCart(state, idCount) {
       const { cart, products } = state
-      const productIndex = cart.findIndex(cartProduct => cartProduct.product.id === id) // NOTE: vráti -1 ak neexistuje, alebo vrati index productu v košiku https://mdn.io/array/findIndex
-      const product = products.find(product => product.id === id)
-
+      const productIndex = cart.findIndex(cartProduct => cartProduct.product.id === idCount.id) // NOTE: vráti -1 ak neexistuje, alebo vrati index productu v košiku https://mdn.io/array/findIndex
+      const product = products.find(product => product.id === idCount.id)
+      
       if (productIndex > -1) {
         const cartProduct = cart[productIndex]
-        cartProduct.amount += 1
+        cartProduct.amount += idCount.amount
       } else {
         cart.push({
-          amonut: 1,
+          amount: idCount.amount,
           product,
         });
+
       }
     },
   },

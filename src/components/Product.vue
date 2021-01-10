@@ -15,10 +15,22 @@
           <p class="hidden md:block text-3xl py-6">{{ productById.name }}</p>
           <p class="text-3xl">{{ priceInEuro(productById.price) }}</p>
           <div class="flex py-10 md:max-w-sm">
-            <button @click="addToCart(productById.id)" class="buttonBor  p-2 flex-1 ">Add to cart</button>
-            <button class="buttonBor mdReduceBor ml-4 w-6 ">-</button>
-            <div><p class="buttonBor mdReduceBor p-2 px-3  ">1</p></div>
-            <button class="buttonBor w-6">+</button>
+            <button
+              @click="addToCart(productId, amount)"
+              class="buttonBor  p-2 flex-1 "
+            >
+              Add to cart
+            </button>
+            <button
+              @click="decreaseAmount()"
+              class="buttonBor mdReduceBor ml-4 w-6 "
+            >
+              -
+            </button>
+            <div>
+              <p class="buttonBor mdReduceBor p-2 px-3  ">{{ amount }}</p>
+            </div>
+            <button @click="increaseAmount()" class="buttonBor w-6">+</button>
           </div>
           <div>
             <p>
@@ -61,6 +73,7 @@ export default {
   data() {
     return {
       productId: this.id,
+      amount: 2,
     };
   },
   props: {
@@ -69,13 +82,30 @@ export default {
       type: [Number, String],
     },
   },
-  methods:{
+  methods: {
     priceInEuro,
-    addToCart(id){
+    addToCart(id, amount) {
       this.$store.commit('addToCart', {
-        id: id
-      })
-    }
+        id: id,
+        amount: amount,
+      });
+        console.log(amount)
+
+    },
+    decreaseAmount() {
+      if (this.amount === 1) {
+        return null;
+      } else {
+        return this.amount-- ;
+      }
+    },
+    increaseAmount() {
+      if (this.amount === 9) {
+        return null;
+      } else {
+        this.amount++;
+      }
+    },
   },
   computed: {
     productById() {
