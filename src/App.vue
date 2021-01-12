@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 md:px-20 bg-gray-200 ">
+  <div class="p-6 md:px-20 bgCol ">
     <header>
       <Navigation />
     </header>
@@ -7,7 +7,7 @@
       <router-view />
       <Footer />
     </body>
-  </div>
+  </div> 
 </template>
 
 <script>
@@ -23,4 +23,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+bgCol{
+  background-color: #F5F5F5;
+}
+</style>

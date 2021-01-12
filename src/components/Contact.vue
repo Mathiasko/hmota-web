@@ -1,7 +1,7 @@
 <template>
   <div class="text-font text-weight">
-    <h2 class="header-size-mobile my-8 ">Contact</h2>
-    <p class="text-color-3">
+    <h2 class="header-size-mobile my-8">Contact</h2>
+    <p class="text-color-3 mb-8">
       Need something? Do you like our content? <br />
       Would you like to offer us a collaboration? <br />
       Be it anything ,we’re here to help and we will do our best to respond as
@@ -25,7 +25,7 @@
       </li>
       <li class="pb-10">
         <p><strong>Head of the photography editorial office</strong></p>
-        <p>Karla  Štvrtková</p>
+        <p>Karla Štvrtková</p>
         <p>karla.svrtkv@gmail.com</p>
       </li>
       <li class="pb-10">
@@ -41,13 +41,19 @@
     </ul>
     <h2 class="header-size-mobile my-8">Vacancies</h2>
     <div class="text-color-3">
-    <p>
-      Unfortunately, there are no vacancies at the moment, however you can send us an unsolicited application. 
-      When applying for a position at HMOTA magazine, remember following : </p>
+      <p>
+        Unfortunately, there are no vacancies at the moment, however you can
+        send us an unsolicited application. When applying for a position at
+        HMOTA magazine, remember following :
+      </p>
       <ul class="list-disc ml-5">
         <li>You have to study at a high school or university</li>
-        <li>You have to be more than  15 years old</li>
-        <li>Do not forget to include into which department you’re applying to (journalism, photography, illustration, graphic design, or some other position)</li>
+        <li>You have to be more than 15 years old</li>
+        <li>
+          Do not forget to include into which department you’re applying to
+          (journalism, photography, illustration, graphic design, or some other
+          position)
+        </li>
         <li>Why do you want to become a member of Hmota magazine?</li>
         <li>Which artistic activity do you pursue?</li>
       </ul>
@@ -56,14 +62,14 @@
     <div>
       <div>
         <label for="name">Name*</label>
-        <input type="text" id="name">
+        <input type="text" id="name" />
       </div>
       <div>
         <label for="email">E-mail*</label>
-        <input type="text" id="email">
+        <input type="text" id="email" />
       </div>
       <div>
-        <input type="textarea" id="text" placeholder="Message">
+        <input type="textarea" id="text" placeholder="Message" />
       </div>
     </div>
   </div>
@@ -71,43 +77,45 @@
 
 <script>
 export default {
-  name: 'Contact',
+  name: "Contact",
 };
 </script>
 
 <style scoped>
-label{display: block;}
-.bgCol{
-  background-color: #7595BB;
+label {
+  display: block;
+}
+.bgCol {
+  background-color: #7595bb;
 }
 
-.text-color-1{
-    color: #F5F5F5;
+.text-color-1 {
+  color: #f5f5f5;
 }
-.text-color-2{
-    color: #3B4361;
+.text-color-2 {
+  color: #3b4361;
 }
-.text-color-3{
-  color: #829EC8;
-}
-
-.header-size-mobile{
-    font-size: 22px;
-}
-.text-size-1-mobile{
-    font-size: 15px;
-}
-.text-size-2-mobile{
-    font-size: 18px;
+.text-color-3 {
+  color: #829ec8;
 }
 
-.large-font-size{
+.header-size-mobile {
+  font-size: 22px;
+}
+.text-size-1-mobile {
+  font-size: 15px;
+}
+.text-size-2-mobile {
+  font-size: 18px;
+}
+
+.large-font-size {
   font-size: 45px;
 }
-.text-font{
-  font-family: 'Poppins', sans-serif;
+.text-font {
+  font-family: "Poppins", sans-serif;
 }
-.text-weight{
-  font-weight:300;
+.text-weight {
+  font-weight: 300;
 }
 </style>

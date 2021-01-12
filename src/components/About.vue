@@ -1,11 +1,13 @@
 <template>
   <div class="md:grid md:grid-cols-2 text-font">
     <div>
-      <img   :src="'assets/img/aboutus.png'" />
+      <img :src="'assets/img/aboutus.png'" />
     </div>
-    <div class="bgCol">
-      <h2 class="pt-10 md:pt-20 text-color-1 header-size-mobile">About HMOTA</h2>
-      <p class="py-10 md:py-14 text-color-1 text-size-1-mobile " >
+    <div class="bgCol mb-1 px-5">
+      <h2 class="pt-10 md:pt-20 text-color-1 header-size-mobile">
+        About HMOTA
+      </h2>
+      <p class="py-10 md:py-14 text-color-1 text-size-1-mobile">
         HMOTA is a nationwide student magazine that brings together and raises
         the profile of young journalists and artists. It’s published four times
         a year. Students from all over Slovakia work for HMOTA in their free
@@ -18,7 +20,7 @@
         <br />We are the embodiment of creativity and art.
       </p>
     </div>
-    <div class="bgCol">
+    <div class="bgCol mb-1 px-5">
       <h2 class="pt-10 md:pt-14 text-color-1 header-size-mobile">Our Story</h2>
       <p class="py-10 md:py-14 text-color-1 text-size-1-mobile">
         The magazine was founded in 2018 by Laura Bilíková, a student from
@@ -42,58 +44,52 @@
         unique design and fresh perspective on a certain topic.
       </p>
     </div>
-    <div >
-      <p class=" pt-10 md:pt-20 text-color-2">
-        <em>“The idea of my own magazine at that time was only a negligible and
-        vague idea, and yet I was thrilled with it. I wrote to my mentor,
-        Alžběta Dlhá and presented the idea to her. She liked it and that’s how
-        a 17-year-old student from Trenčín at that time started to create. I
-        came up with the name, started socials, networking, created the first
-        visuals, and addressed my friends. They were too enthusiastic about the
-        idea and the first issue gradually began to form. HMOTA finally arose
-        from nothing, just an idea, a spark.”<br />
-        <br />
-        - Laura Bilíková, general editor</em> 
+    <div class="bgImg">
+      <p class="pt-10 md:pt-20 text-color-2 px-5">
+        <em
+          >“The idea of my own magazine at that time was only a negligible and
+          vague idea, and yet I was thrilled with it. I wrote to my mentor,
+          Alžběta Dlhá and presented the idea to her. She liked it and that’s
+          how a 17-year-old student from Trenčín at that time started to create.
+          I came up with the name, started socials, networking, created the
+          first visuals, and addressed my friends. They were too enthusiastic
+          about the idea and the first issue gradually began to form. HMOTA
+          finally arose from nothing, just an idea, a spark.”<br />
+          <br />
+          - Laura Bilíková, general editor</em
+        >
       </p>
     </div>
     <div class="col-span-2">
-      <h2 class="py-10 md:py-14 text-color-2 ">Our values</h2>
+      <h2 class="py-10 md:py-14 text-color-2">Our values</h2>
       <div class="md:grid grid-cols-2 text-color-1">
         <Value
           :value="'01. Quality'"
-          :text="
-            'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'
-          "
+          :text="'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'"
           :img="'value'"
           class="p-5 mb-5 md:p-10 md:mr-5"
         />
         <Value
           :value="'02. Community'"
-          :text="
-            'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'
-          "
+          :text="'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'"
           :img="'value'"
           class="p-5 mb-5 md:p-10 md:ml-5"
         />
         <Value
           :value="'03. Young perspective'"
-          :text="
-            'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'
-          "
+          :text="'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'"
           :img="'value'"
           class="p-5 my-5 md:p-10 md:mr-5"
         />
         <Value
           :value="'04. Tangibility'"
-          :text="
-            'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'
-          "
+          :text="'In HMOTA, quality is of paramount importance.  We invest to unique design, quality paper and try to improve every aspect of the magazine with every new issue.'"
           :img="'value'"
           class="p-5 my-5 md:p-10 md:ml-5"
         />
       </div>
     </div>
-    <div class="md:col-span-2 text-color-1" >
+    <div class="md:col-span-2 text-color-1">
       <h2>Our Process</h2>
       <img class="hidden md:block w-full" :src="'assets/img/infogBig.jpg'" />
       <img class="md:hidden w-full" :src="'assets/img/infogSmall.jpg'" />
@@ -114,10 +110,10 @@
 </template>
 
 <script>
-import Value from './forAbout/Value';
+import Value from "./forAbout/Value";
 
 export default {
-  name: 'About',
+  name: "About",
   components: {
     Value,
   },
@@ -128,23 +124,28 @@ export default {
 .bgCol {
   background-color: #353d67;
 }
-.text-color-1{
-    color: #F5F5F5;
+.bgImg {
+  background-image: url("~@/assets/img/img.png");
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-.text-color-2{
-    color: #3B4361;
+.text-color-1 {
+  color: #f5f5f5;
+}
+.text-color-2 {
+  color: #3b4361;
 }
 
-.header-size-mobile{
-    font-size: 22px;
+.header-size-mobile {
+  font-size: 22px;
 }
-.text-size-1-mobile{
-    font-size: 15px;
+.text-size-1-mobile {
+  font-size: 15px;
 }
-.text-size-2-mobile{
-    font-size: 18px;
+.text-size-2-mobile {
+  font-size: 18px;
 }
-.text-font{
-  font-family: 'Poppins', sans-serif;
+.text-font {
+  font-family: "Poppins", sans-serif;
 }
 </style>

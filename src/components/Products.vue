@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex md:grid md:grid-cols-5 md:h-20">
+    <div class="flex justify-between md:grid md:grid-cols-5 md:h-20">
       <p class="mr-5 md:m-auto">SHOWING</p>
       <button @click="setFilter('')">All</button>
       <button @click="setFilter('magazines')">Magazines</button>
@@ -9,7 +9,7 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4">
       <router-link :to="{name: 'Product'}" class="" v-for="product in visibleProducts" :key="product.id">
-        <img :src="require(`../assets/productImg/${product.image[0]}`)" />
+        <img   :src="require(`../assets/productImg/${product.image[0]}`)" />
         <div>
             <p>{{product.name}}</p>
             <p>{{product.price}}</p>
@@ -44,4 +44,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+div img{
+   height: 250px;
+}
+button{
+    transition: text-decoration 2s linear 1s ;
+}
+button:hover{
+    
+    text-decoration: underline;
+}
+</style>
