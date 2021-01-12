@@ -60,7 +60,7 @@
           <img :src="'./assets/img/annualSub.jpg'" />
         </div>
       </div>
-      <div>
+      <div class="md:col-span-2">
         <CarouselReviews />
       </div>
     </div>

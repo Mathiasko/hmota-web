@@ -33,7 +33,7 @@ const jurnal = [
     author: 'Simona Fajrfkova',
     category: 'Report',
     content: {
-      heading: 'Wounds covered by gold',
+      heading: 'Jako preco na co',
       citat:
         '“In Japan, broken items are repaired with gold. This “mistake” is considered a unique history of the object, which adds to the beauty. “',
       sections: [
@@ -61,7 +61,7 @@ const jurnal = [
     author: 'Simona Fajrfkova',
     category: 'Report',
     content: {
-      heading: 'Wounds covered by gold',
+      heading: 'Aj v zime byva teplo',
       citat:
         '“In Japan, broken items are repaired with gold. This “mistake” is considered a unique history of the object, which adds to the beauty. “',
       section: [

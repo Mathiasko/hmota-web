@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3 md:px-32 bg-gray-200 ">
+  <div class="p-3 xl:max-w-7xl m-auto  ">
     <header>
       <Navigation />
     </header>

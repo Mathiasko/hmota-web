@@ -38,17 +38,16 @@
     </div>
 
     <div class="w-full borTopNone">
-      <div class="md:hidden">Search</div>
+      <div class="md:hidden pl-3">Search</div>
 
       <div class="md:flex w-full" id="menu" :class="{ hidden: toggleMob }">
         <div class="md:flex w-full">
-          <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width2 borRight">
-          <router-link
-            :to="{ name: 'Products' }"
-            
+          <div
+            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width2 borRight"
           >
-            Shop
-          </router-link>
+            <router-link :to="{ name: 'Products' }">
+              Shop
+            </router-link>
           </div>
           <div
             class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight relative"
@@ -67,21 +66,17 @@
               <div class="p-5 text-center jurBor">Volaco</div>
             </div>
           </div>
-          <div class="p-5 border-t border-solid border-gray-800 md:border-none text-center width1 borRight">
 
-
-            <router-link :to="{ name: 'About' }"> About us </router-link>
-          </div>
-          <div>
-            <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width">
-            <router-link
-              :to="{ name: 'Contact' }"
-              
-            >
-              Contact
-            
+          <div class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight">
+            <router-link :to="{ name: 'About' }">
+              About us
             </router-link>
-            </div>
+          </div>
+
+          <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1">
+            <router-link :to="{ name: 'Contact' }">
+              Contact
+            </router-link>
           </div>
         </div>
       </div>
@@ -91,7 +86,7 @@
 
 <script>
 export default {
-  name: "Navigation",
+  name: 'Navigation',
   data() {
     return {
       toggleMob: true,
@@ -116,11 +111,12 @@ export default {
   .width {
     width: 25%;
   }
+
   .width1 {
-    width: calc(25% + 1px);
+    width: calc(25% - 0.8px);
   }
   .width2 {
-    width: calc(25% + 1.8px);
+    width: calc(25% + 0.8px);
   }
 }
 .bor {

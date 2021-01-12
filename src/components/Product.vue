@@ -1,23 +1,23 @@
 <template>
   <div>
     <div class="flex flex-col md:flex-row">
-      <div class="m-auto width md:flex-1">
+      <div class="m-auto md:flex-1">
         <p class="md:hidden text-3xl py-6">{{ productById.name }}</p>
         <div class="md:flex">
           <img
-            class="width m-auto"
+            class="m-auto max-w-lg max-h p-10"
             :src="require(`../assets/productImg/${productById.image[0]}`)"
           />
         </div>
       </div>
       <div class="bgcol py-10 md:flex-1">
-        <div class="mx-5">
+        <div class="mx-5 text-white">
           <p class="hidden md:block text-3xl py-6">{{ productById.name }}</p>
-          <p class="text-3xl">{{ priceInEuro(productById.price) }}</p>
-          <div class="flex py-10 md:max-w-sm">
+          <p class="text-5xl">{{ priceInEuro(productById.price) }}</p>
+          <div class="flex py-10 md:max-w-sm text-blue-500">
             <button
               @click="addToCart(productId, amount)"
-              class="buttonBor  p-2 flex-1 "
+              class="buttonBor p-2 flex-1 "
             >
               Add to cart
             </button>
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div>
-      <p>Related products</p>
+      <p class="p-5 border-l border-r border-t border-black">Related products</p>
       <div class="grid grid-cols-2 md:grid-cols-4 border-l border-black">
         <ProductPreview
           v-for="product in limitRelated"
@@ -120,12 +120,13 @@ export default {
 
 <style scoped>
 @media (max-width: 768px) {
-  .width {
-    width: 80vw;
-  }
   .reduceBor {
     margin-right: -1px;
   }
+}
+
+.max-h{
+  max-height: 32rem;
 }
 .bgcol {
   background-color: #7393bf;
