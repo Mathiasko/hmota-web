@@ -40,7 +40,7 @@
       </li>
     </ul>
     <h2 class="header-size-mobile my-8">Vacancies</h2>
-    <div class="text-color-3">
+    <div class="text-color-3 mb-8">
       <p>
         Unfortunately, there are no vacancies at the moment, however you can
         send us an unsolicited application. When applying for a position at
@@ -61,15 +61,13 @@
     </div>
     <div>
       <div>
-        <label for="name">Name*</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" placeholder="Name*" />
       </div>
       <div>
-        <label for="email">E-mail*</label>
-        <input type="text" id="email" />
+        <input type="text" id="email" placeholder="E-mail*" />
       </div>
       <div>
-        <input type="textarea" id="text" placeholder="Message" />
+        <textarea cols="20" rows="5" placeholder="Message" />
       </div>
     </div>
   </div>
@@ -118,4 +116,14 @@ label {
 .text-weight {
   font-weight: 300;
 }
+input[type=text]{
+  border-bottom: #2C3A50 2px solid ;
+  margin-bottom: 20px;
+}
+
+textarea{
+  border: #2C3A50 2px solid ;
+  resize: none;
+}
+
 </style>

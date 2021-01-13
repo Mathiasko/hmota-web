@@ -15,13 +15,9 @@
           and art.
         </p>
         <div class="md:w-56 h-16  mb-20 header-size-mobile">
-          <button
-            class="w-full h-full flex items-center justify-between p-2 bg-white"
-            href=""
-          >
-            <p class="pl-3  text-color-3">Current Issue</p>
-            <p class="">-></p>
-          </button>
+          <button class="w-full h-full flex items-center justify-between p-2 bg-white pl-3  text-color-3" href="">
+            Current Issue ->
+            </button>
         </div>
       </div>
       <div class="p-5">
@@ -116,5 +112,11 @@ export default {
 }
 .text-font{
   font-family: 'Poppins', sans-serif;
+}
+
+button:hover{
+  background-color: #587EA5 ;
+  color:  #f5f5f5;
+  transition: ease-in 1s;
 }
 </style>

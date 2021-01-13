@@ -1,6 +1,6 @@
 <template>
   <div class="md:grid md:grid-cols-2 text-font">
-    <div>
+    <div >
       <img :src="'assets/img/aboutus.png'" />
     </div>
     <div class="bgCol mb-1 px-5">
@@ -61,7 +61,7 @@
       </p>
     </div>
     <div class="col-span-2">
-      <h2 class="py-10 md:py-14 text-color-2">Our values</h2>
+      <h2 class="py-10 md:py-14 text-color-2 md:header-size">Our values</h2>
       <div class="md:grid grid-cols-2 text-color-1">
         <Value
           :value="'01. Quality'"
@@ -89,9 +89,8 @@
         />
       </div>
     </div>
-    <div class="md:col-span-2 text-color-1">
-      <h2>Our Process</h2>
-      <img class="hidden md:block w-full" :src="'assets/img/infogBig.jpg'" />
+    <div class="md:col-span-2 ">
+      <img class="hidden md:block w-full" :src="'assets/img/Our-process.png'" />
       <img class="md:hidden w-full" :src="'assets/img/infogSmall.jpg'" />
     </div>
     <div>
@@ -104,7 +103,11 @@
         miscellaneous sample of young innovative creatives, who are constantly
         trying to change their surroundings for better.
       </p>
-      <button class="py-10">Meet the team</button>
+      
+      <button  class="mt-5 p-5 bgCol header-size-mobile text-color-1">Meet the team -></button>
+      
+      
+      
     </div>
   </div>
 </template>
@@ -118,6 +121,8 @@ export default {
     Value,
   },
 };
+
+
 </script>
 
 <style scoped>
@@ -128,6 +133,7 @@ export default {
   background-image: url("~@/assets/img/img.png");
   background-position: center center;
   background-repeat: no-repeat;
+   
 }
 .text-color-1 {
   color: #f5f5f5;
@@ -148,4 +154,15 @@ export default {
 .text-font {
   font-family: "Poppins", sans-serif;
 }
+
+.header-size{
+  font-size: 50px;
+}
+
+button:hover{
+  background-color: #f5f5f5;
+  color: #3b4361;
+  transition: ease-in 1s;
+}
+
 </style>
