@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="top">
     <div class="flex w-full">
       <div class="flex justify-center w-1/6 bor md:flex-1">
         <div class="md:hidden">
@@ -49,12 +49,13 @@
               Shop
             </router-link>
           </div>
-          <div
-            class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight relative"
-            @click="toggleJur = !toggleJur"
-          >
-            Journal
-            <div
+          <div class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight relative">
+            <router-link
+             :to="{ name: 'Journals' }"
+              @click="toggleJur = !toggleJur"
+            >
+              Journal
+              <!-- <div
               class="absolute flex flex-col w-full top-16 left-0"
               :class="{ hidden: toggleJur }"
             >
@@ -64,16 +65,21 @@
               <div class="p-5 text-center jurBor">Volaco</div>
               <div class="p-5 text-center jurBor">Volaco</div>
               <div class="p-5 text-center jurBor">Volaco</div>
-            </div>
+            </div> -->
+            </router-link>
           </div>
 
-          <div class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight">
+          <div
+            class="p-5 border-t border-solid border-gray-800 md:border-none text-center width borRight"
+          >
             <router-link :to="{ name: 'About' }">
               About us
             </router-link>
           </div>
 
-          <div class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1">
+          <div
+            class="p-5 border-t-2 border-solid border-gray-800 md:border-none text-center width1"
+          >
             <router-link :to="{ name: 'Contact' }">
               Contact
             </router-link>

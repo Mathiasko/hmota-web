@@ -1,16 +1,14 @@
 <template>
-  <div class="relative">
-    <div class="middleBor">
-      <img src="assets/img/foto_clanok1.png" />
-      <div class="px-2">
-        <h2 class="py-5 text-2xl">Hygge</h2>
-        <p class="pb-5">
-          “The idea of my own magazine at that time was only a negligible and
-          vague idea, and yet I was thrilled with it. I wrote to my mentor,
-          Alžběta Dlhá and presented the
+  <div class="relative hover">
+    <div class="middleBor h-prodPrew">
+      <img class="h w-full object-cover" :src="`assets/img/journalImg/${journal.img}`" />
+      <div class="px-2 relative h-full">
+        <h2 class="py-5 text-2xl">{{journal.content.heading.substring(0,50)}}</h2>
+        <p class="pb-5 absolute md:top-36">
+          {{journal.content.section[0].text.substring(0,150)}}
         </p>
-        <p class="pb-5 text-sm">
-          Report | by Alzbeta Ferkova | 21 Sep 2020
+        <p class="pb-5 text-sm absolute bottom-56">
+          {{journal.category}} | <br> {{journal.author}} | {{journal.date}}
         </p>
       </div>
     </div>
@@ -20,6 +18,7 @@
 <script>
 export default {
   name: 'JournalPreview',
+    props: ['journal'],
 };
 </script>
 
@@ -27,6 +26,21 @@ export default {
 @media (max-width: 768px) {
   .smallRedBor {
     margin-bottom: -1px;
+  }
+    .h{
+    height: 15rem;
+  }
+    .h-prodPrew {
+    height: 33rem;
+  }
+}
+@media (min-width: 768px) {
+
+  .h-prodPrew {
+    height: 38rem;
+  }
+  .h{
+    height: 15rem;
   }
 }
 
@@ -44,5 +58,9 @@ export default {
   z-index: 1;
   content: '';
   background: #000;
+}
+
+.hover:hover{
+  background-color: #CDB6BD;
 }
 </style>

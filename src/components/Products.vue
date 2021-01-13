@@ -48,7 +48,7 @@
     </h2>
     <div class="grid grid-cols-2 md:grid-cols-4 borlb">
       <router-link
-        :to="{ name: 'Product', params: { id: product.id } }"
+        :to="{ name: 'Product', params: { id: product.id }, hash:'#top' }"
         v-for="product in visibleProducts"
         :key="product.id"
       >

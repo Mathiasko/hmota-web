@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 md:grid-cols-7 bgCol p-10 text-color-1 text-size-2-mobile">
+  <div class="grid grid-cols-2 gap-x-10 md:grid-cols-7 bgCol p-10 text-color-1 text-size-2-mobile">
     <div>
       <p><strong>Socials</strong></p>
       <ul>
@@ -39,13 +39,13 @@
         <li>Arts & Culture</li>
       </ul>
     </div>
-    <div class="col-span-2 pt-10">
+    <div class="col-span-2 pt-10 md:pt-0">
       <p><strong>©2019 – 2021 HMOTA GDPR rules</strong></p>
     </div>
-    <div class="col-span-2 pt-10">
+    <div class="col-span-2 pt-10 md:pt-1">
       <p><strong>Contact</strong></p>
       <p>casopishmota@gmail.com</p>
-      <img :src="'assets/img/logoFut.jpg'">
+      <img class="pr-10 pt-10" :src="'assets/img/logoFut.svg'">
     </div>
   </div>
 </template>

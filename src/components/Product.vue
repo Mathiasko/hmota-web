@@ -41,7 +41,9 @@
       </div>
     </div>
     <div>
-      <p class="p-5 border-l border-r border-t border-black">Related products</p>
+      <p class="p-5 border-l border-r border-t border-black">
+        Related products
+      </p>
       <div class="grid grid-cols-2 md:grid-cols-4 border-l border-black">
         <ProductPreview
           v-for="product in limitRelated"
@@ -98,7 +100,6 @@ export default {
         this.amount++;
       }
     },
-
   },
   computed: {
     productById() {
@@ -108,10 +109,9 @@ export default {
       return this.$store.getters.getRelatedProducts(this.productById.category);
     },
     relatedProductsToShow() {
-      return this.relatedProducts.filter((product) => this.productId != product.id,
-      );
+      return this.relatedProducts.filter((product) => this.productId != product.id);
     },
-        limitRelated() {
+    limitRelated() {
       return this.relatedProductsToShow.slice(0, 4);
     },
   },
@@ -125,7 +125,7 @@ export default {
   }
 }
 
-.max-h{
+.max-h {
   max-height: 32rem;
 }
 .bgcol {

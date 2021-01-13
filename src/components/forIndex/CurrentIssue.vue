@@ -20,16 +20,18 @@
         - Instructions from our Karla: how to develop a
         film in the comfort of your home And much more!
       </p>
-      <button
-            class="w-full h-full flex items-center justify-between p-2 bg-white text-center  mt-3 header-size-mobile"
+      <div class="md:w-80 m-2 pt-10 header-size-mobile">
+          <button
+            class="w-full flex items-center justify-between  bg-white"
             href=""
           >
-            <p class="pl-14  text-color-3 ">Current Issue</p>
-            <p class="text-color-3 ">-></p>
+            <router-link :to="{ name: 'Product', params: { id: '1' } }" class="pl-10 text-color-2">Buy Current Issue</router-link>
+            <img class="w-14 arrowBor" :src="`./assets/img/arrowB.png`" />
           </button>
+        </div>
     </div>
     <div class="flex-1 ">
-      <img class="my-10 mx-8" :src="`./assets/img/currentissue.jpg`">
+      <img class="my-10 m-auto" :src="`./assets/img/currentissue.jpg`">
     </div>
   </div>
 </template>
@@ -62,5 +64,8 @@ export default {
 }
 .text-size-2-mobile{
     font-size: 18px;
+}
+.arrowBor {
+  border-left: 1px solid #3B4361;
 }
 </style>

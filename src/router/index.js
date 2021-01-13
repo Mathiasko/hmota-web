@@ -9,7 +9,6 @@ import Cart from '../components/Cart.vue';
 import Journals from '../components/Journals.vue';
 import Journal from '../components/Journal.vue';
 
-
 const history = createWebHashHistory();
 const router = createRouter({
   history,
@@ -21,9 +20,12 @@ const router = createRouter({
     { path: '/products', name: 'Products', component: Products },
     { path: '/cart', name: 'Cart', component: Cart },
     { path: '/journals', name: 'Journals', component: Journals },
-    { path: '/journal/', name: 'Journal', component: Journal },
+    { path: '/journal/:id', props: true, name: 'Journal', component: Journal },
     { path: '/product/:id', props: true, name: 'Product', component: Product },
   ],
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+}
 });
 
 export default router;

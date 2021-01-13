@@ -1,53 +1,36 @@
 <template>
   <div class=".text-font">
     <h2 class="my-16 text-3xl header-size-mobile ">Editor's Pick</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3">
-      <Pick
-        :title="'Hygge'"
-        :text="
-          'The idea of my own magazine at that time was only a negligible and vague idea, and yet I was thrilled with it. I wrote to my mentor, Alžběta Dlhá and presented the idea to her'
-        "
-        :picture="'foto_clanok1.png'"
-        :category="'Reports'"
-        :by="'Eliska'"
-        :when="'22.01.2020'"
-      />
-      <Pick
-        :title="'Hygge'"
-        :text="
-          'The idea of my own magazine at that time was only a negligible and vague idea, and yet I was thrilled with it. I wrote to my mentor, Alžběta Dlhá and presented the idea to her'
-        "
-        :picture="'foto_clanok1.png'"
-        :category="'Reports'"
-        :by="'Eliska'"
-        :when="'22.01.2020'"
-      />
-      <Pick
-        :title="'Hygge'"
-        :text="
-          'The idea of my own magazine at that time was only a negligible and vague idea, and yet I was thrilled with it. I wrote to my mentor, Alžběta Dlhá and presented the idea to her'
-        "
-        :picture="'foto_clanok1.png'"
-        :category="'Reports'"
-        :by="'Eliska'"
-        :when="'22.01.2020'"
-      />
+    <div class="grid grid-cols-1 md:grid-cols-4 border-l border-black">
+      <router-link
+        :to="{ name: 'Journal', params: { id: journal.id }, hash:'#top'}"
+        v-for="journal in visibleJournals"
+        :key="journal.id"
+      >
+        <JournalPreview :journal="journal" />
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import Pick from './Pick.vue';
+import JournalPreview from '../forJournal/JournalPreview.vue';
 
 export default {
   name: 'EditorsPick',
   components: {
-    Pick,
+    JournalPreview,
+  },
+  computed: {
+    visibleJournals() {
+      return this.$store.getters.getEditorsPick;
+    },
   },
 };
 </script>
 
 <style scoped>
-.text-font{
+.text-font {
   font-family: 'Poppins', sans-serif;
-}</style>
+}
+</style>

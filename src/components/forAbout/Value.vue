@@ -1,8 +1,8 @@
 <template>
   <div class="bgColor">
-    <img :src="`assets/img/${img}.jpg`" />
-    <h2>{{ value }}</h2>
-    <p>{{ text }}</p>
+    <img :src="`assets/img/value/${img}.jpg`" />
+    <h2 class="py-5 text-2xl">{{ value }}</h2>
+    <p class="text-lg">{{ text }}</p>
   </div>
 </template>
 

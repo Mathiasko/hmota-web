@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative hover">
     <div class="middleBor h-prodPrew">
       <div class="h m-5">
         <img
@@ -7,9 +7,9 @@
           :src="require(`../../assets/productImg/${product.image[0]}`)"
         />
       </div>
-      <div class="px-2 border-t border-black">
-        <p class="pt-5 text-base md:text-2xl">{{ product.name }}</p>
-        <p class="py-3 ">{{ priceInEuro(product.price) }}</p>
+      <div class="px-2 border-t border-black relative">
+        <p class="pt-5 text-lg md:text-2xl">{{ product.name }}</p>
+        <p class="md:py-3 text-2xl absolute top-20 right-5">{{ priceInEuro(product.price) }}</p>
       </div>
     </div>
   </div>
@@ -38,11 +38,9 @@ export default {
   }
 }
 @media (min-width: 768px) {
-  /* .big-h {
-    height: 22rem;
-  } */
+
   .h-prodPrew {
-    height: 38rem;
+    height: 41rem;
   }
   .h{
     height: 30rem;
@@ -63,5 +61,11 @@ export default {
   z-index: 1;
   content: '';
   background: #000;
+}
+.hover{
+  transition: 0.3s ease-in-out;
+}
+.hover:hover{
+  background-color: #CDB6BD;
 }
 </style>

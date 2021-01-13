@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3 xl:max-w-7xl m-auto  ">
+  <div class="p-3 xl:max-w-screen-xl m-auto  ">
     <header>
       <Navigation />
     </header>
@@ -7,7 +7,7 @@
       <router-view />
       <Footer />
     </body>
-  </div>
+  </div> 
 </template>
 
 <script>
@@ -15,6 +15,8 @@ import Navigation from './components/Navigation.vue';
 import Footer from './components/Footer.vue';
 
 export default {
+
+
   name: 'App',
   components: {
     Navigation,
@@ -23,4 +25,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+*{
+  font-family: 'Poppins', sans-serif;
+}
+</style>

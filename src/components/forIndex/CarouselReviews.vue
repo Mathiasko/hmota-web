@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h2 class="text-3xl">Reviews</h2>
+    <h2 class="text-3xl pb-5">Reviews</h2>
     <agile :navButtons="false" :autoplaySpeed="5000" :autoplay="false">
       <div class="slide w-full">
         <div class="md:flex">
           <div class="flex-1 ">
-            <img class="pr-20" :src="`./assets/img/reviews/VOICES.png`" />
+            <img class="pr-20 padtop" :src="`./assets/img/reviews/VOICES.png`" />
           </div>
           <div class="self-center flex-1">
             <p>
@@ -66,7 +66,7 @@
       <div class="slide">
         <div class="md:flex">
           <div class="flex-1 ">
-            <img class="pr-20" :src="`./assets/img/reviews/Medziriadky.png`" />
+            <img class="pr-20 pb-10" :src="`./assets/img/reviews/Medziriadky.png`" />
           </div>
           <div class="self-center flex-1">
             <p>
@@ -103,5 +103,10 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 768px) {
 
+  .padtop{
+    margin-top: -200px;
+}
+  }
 </style>

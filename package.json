@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "overlayscrollbars-vue": "^0.2.2",
     "vue": "^3.0.0",
     "vue-agile": "^1.1.3",
     "vue-router": "^4.0.2",
+    "vue3-perfect-scrollbar": "^1.5.5",
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {

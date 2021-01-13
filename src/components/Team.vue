@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="text-font">
     <div class="relative">
       <img :src="'assets/img/Team.jpg'" />
       <p class="position header-size-mobile">Meet our team</p>
@@ -15,10 +15,10 @@
       />
     </div>
     <div>
-      <h2 class="pt-12 text-3xl">Jurnalists</h2>
-      <div>
+      <h2 class="pt-12 text-3xl">Journalists</h2>
+      <div >
         <ul class="grid grid-cols-2 md:grid-cols-4">
-          <li v-for="(member, index) in TeamMembers.jurnalists" :key="index">
+          <li class="cover" v-for="(member, index) in TeamMembers.jurnalists" :key="index">
             <TeamMember
               :id="index"
               @click="
@@ -142,5 +142,12 @@ export default {
 }
 .text-size-2-mobile{
     font-size: 18px;
+}
+.text-font{
+  font-family: 'Poppins', sans-serif;
+}
+
+.cover:hover{
+  background-color: #B28A95;
 }
 </style>
