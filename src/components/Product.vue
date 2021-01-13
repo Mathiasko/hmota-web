@@ -14,7 +14,7 @@
         <div class="mx-5 text-white">
           <p class="hidden md:block text-3xl py-6">{{ productById.name }}</p>
           <p class="text-5xl">{{ priceInEuro(productById.price) }}</p>
-          <div class="flex py-10 md:max-w-sm text-blue-500">
+          <div class="flex py-10 md:max-w-sm textcol">
             <button
               @click="addToCart(productId, amount)"
               class="buttonBor p-2 flex-1 "
@@ -27,8 +27,8 @@
             >
               -
             </button>
-            <div>
-              <p class="buttonBor mdReduceBor p-2 px-3  ">{{ amount }}</p>
+            <div class="w-8">
+              <p class="buttonBor mdReduceBor p-2 px-3">{{ amount }}</p>
             </div>
             <button @click="increaseAmount()" class="buttonBor w-6">+</button>
           </div>
@@ -124,7 +124,9 @@ export default {
     margin-right: -1px;
   }
 }
-
+.textcol{
+  color: #7393bf;
+}
 .max-h {
   max-height: 32rem;
 }

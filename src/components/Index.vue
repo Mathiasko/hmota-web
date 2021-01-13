@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="p-5 border border-black">
-        <h2 class="py-16 md:text-3xl header-size-mobile text-color-2">
+        <h2 class="py-10 md:text-3xl header-size-mobile text-color-2">
           Magazine of young people about art, culture and life
         </h2>
         <p class="md:text-lg text-size-1-mobile text-color-2">
@@ -45,7 +45,7 @@
         </button>
       </div>
       <div>
-        <img class="indexImg" :src="`./assets/img/index.png`" />
+        <img class="border-l-0" :src="`./assets/img/index.jpg`" />
       </div>
       <div class="md:col-span-2 ">
         <EditorsPick />
@@ -58,7 +58,7 @@
       <div class="md:col-span-2 border border-black">
         <CurrentIssue />
       </div>
-      <div class="md:col-span-2 md:flex w-full border border-t-0 border-black">
+      <div class="md:col-span-2 md:flex w-full border border-t-0 border-black md:p-10">
         <div class="flex-1 ">
           <router-link :to="{ name: 'Product', params: { id: '5' }, hash:'#top'}" class="large-font-size text-color-2 text-5xl pt-10">
             GET ANNUAL HMOTA SUBSCRIPTION
@@ -66,7 +66,7 @@
           <img class="w-20" :src="`./assets/img/arrowB.png`" />
         </div>
         <div class="flex-1">
-          <img :src="'./assets/img/annualSub.jpg'" />
+          <img class="m-auto" :src="'./assets/img/annualSub.jpg'" />
         </div>
       </div>
       <div class="md:col-span-2 border border-t-0 border-black p-5">
@@ -114,10 +114,6 @@ export default {
 
 .arrowBor {
   border-left: 2px solid #7595bb;
-}
-.indexImg {
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 .bgCol {
   background-color: #7595bb;

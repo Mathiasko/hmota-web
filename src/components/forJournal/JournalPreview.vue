@@ -2,12 +2,12 @@
   <div class="relative hover">
     <div class="middleBor h-prodPrew">
       <img class="h w-full object-cover" :src="`assets/img/journalImg/${journal.img}`" />
-      <div class="px-2 relative h-full">
+      <div class="px-2  ">
         <h2 class="py-5 text-2xl">{{journal.content.heading.substring(0,50)}}</h2>
-        <p class="pb-5 absolute md:top-36">
+        <p class="pb-5 absolute md:top-96">
           {{journal.content.section[0].text.substring(0,150)}}
         </p>
-        <p class="pb-5 text-sm absolute bottom-56">
+        <p class="pb-5 text-sm absolute bottom-0">
           {{journal.category}} | <br> {{journal.author}} | {{journal.date}}
         </p>
       </div>
@@ -62,5 +62,8 @@ export default {
 
 .hover:hover{
   background-color: #CDB6BD;
+}
+.hover{
+  transition: 0.2s;
 }
 </style>
